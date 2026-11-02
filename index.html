@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>버디메이트 - 스크린·필드·연습장 골프 조인</title>
+<meta name="description" content="같이 칠 사람이 없는 골퍼가 처음 보는 사람과 2~4명으로 모여 치는 앱, 버디메이트. 스크린·필드·연습장·파3·파크골프. 지역별 대회도 준비하고 있습니다.">
+<link rel="canonical" href="https://birdiemate.kr/">
+<meta name="theme-color" content="#0d2b20">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="버디메이트">
+<meta property="og:url" content="https://birdiemate.kr/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="버디메이트 - 혼자 치던 골프를, 함께 치는 문화로">
+<meta property="og:description" content="처음 보는 골퍼와 2~4명이 모여 치는 골프 조인 앱. 지역별 대회도 준비하고 있습니다.">
+<meta property="og:image" content="https://birdiemate.kr/logo.png">
+<link rel="icon" href="logo.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"버디메이트","alternateName":"버디메이트 - 스크린·필드·연습장 골프 조인","description":"처음 보는 골퍼 2~4명이 모여 치는 골프 조인 앱. 스크린, 필드, 연습장·파3, 파크골프.","applicationCategory":"SportsApplication","operatingSystem":"iOS, Android","url":"https://birdiemate.kr/","inLanguage":"ko","publisher":{"@type":"Organization","name":"페어웨이앤컴퍼니"}}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --green:#0d2b20;--green2:#16402f;--green3:#1c4d3a;
+  --ivory:#fbf7ec;--ivory2:#f2ead6;--paper:#ffffff;
+  --gold:#c9a24a;--gold2:#e2c377;
+  --ink:#14211b;--body:#33433a;--mute:#5d6e63;
+  --line:#e4dbc3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  color:var(--body);background:var(--ivory);
+  font-size:19px;line-height:1.85;letter-spacing:-0.01em;
+  word-break:keep-all;overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+h1,h2,h3{color:var(--ink);letter-spacing:-0.035em;line-height:1.3;font-weight:800}
+.kicker{display:inline-block;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:.14em;margin-bottom:18px}
+.lead{font-size:clamp(19px,2.2vw,22px);color:var(--mute);max-width:660px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+section{padding:112px 0}
+h2{font-size:clamp(30px,4.4vw,48px)}
+.divider{width:56px;height:3px;background:var(--gold);border-radius:2px;margin:26px auto 0}
+
+/* 상단 메뉴 */
+nav{position:sticky;top:0;z-index:20;background:rgba(13,43,32,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,162,74,.18)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ivory);font-weight:800;font-size:20px;letter-spacing:-.03em}
+.brand img{width:36px;height:36px;border-radius:9px}
+.menu{display:flex;gap:30px;font-size:16px;font-weight:500;color:#d4dfd6}
+.menu a:hover{color:var(--gold2)}
+.cta{background:var(--gold);color:var(--green);padding:10px 22px;border-radius:999px;font-weight:700;font-size:15.5px}
+@media(max-width:900px){.menu{display:none}}
+
+/* 첫 화면 */
+.hero{background:radial-gradient(ellipse 80% 90% at 85% 0%,var(--green3) 0%,var(--green) 62%);padding:104px 0 120px;color:var(--ivory)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero h1{color:var(--ivory);font-size:clamp(40px,6.2vw,70px);line-height:1.22;letter-spacing:-.045em}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero .lead{color:#d3ddd5;margin-top:28px}
+.stores{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:170px;padding:17px 28px;border-radius:14px;font-weight:700;font-size:17px}
+.btn.fill{background:var(--ivory);color:var(--green)}
+.btn.line{border:1.5px solid rgba(251,247,236,.5);color:var(--ivory)}
+.note{margin-top:18px;font-size:15px;color:#a9bbae}
+
+.board{background:var(--ivory);border-radius:28px;padding:24px;box-shadow:0 44px 90px rgba(0,0,0,.5)}
+.board .cap{font-size:14px;color:var(--mute);margin-bottom:14px;font-weight:600}
+.room{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin-bottom:12px}
+.room:last-child{margin-bottom:0}
+.room b{display:block;font-size:19px;color:var(--ink);letter-spacing:-.03em;line-height:1.4}
+.room small{display:block;font-size:15px;color:var(--mute);margin-top:2px}
+.room .row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.dots{display:flex;gap:6px}.dots i{width:13px;height:13px;border-radius:50%;background:var(--green)}.dots i.e{background:#d8d0b8}
+.pill{background:var(--green);color:var(--ivory);font-size:14px;padding:5px 13px;border-radius:999px;font-weight:700}
+.pill.gold{background:var(--gold);color:var(--green)}
+@media(max-width:900px){.hero{padding:72px 0 84px}.hero .wrap{grid-template-columns:1fr;gap:48px}.board{max-width:460px}}
+
+/* 불편 해결 */
+.solve{background:var(--ivory)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;text-align:left}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:34px 30px 32px;box-shadow:0 8px 24px rgba(20,33,27,.04)}
+.card .q{font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.06em;margin-bottom:14px}
+.card h3{font-size:24px;margin-bottom:16px}
+.card .arrow{display:block;width:34px;height:2px;background:var(--gold);margin-bottom:16px}
+.card p{font-size:18px;color:var(--body);line-height:1.8}
+@media(max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.cards{grid-template-columns:1fr}}
+
+/* 사용 방법 */
+.how{background:var(--green);color:var(--ivory)}
+.how h2{color:var(--ivory)}.how .lead{color:#c3d1c7}
+.steps{max-width:860px;margin:60px auto 0;display:grid;gap:16px}
+.step{display:grid;grid-template-columns:64px 1fr;gap:24px;background:var(--green2);border:1px solid rgba(201,162,74,.22);border-radius:22px;padding:28px 30px;text-align:left}
+.step .n{width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:23px}
+.step h3{color:var(--ivory);font-size:22px;margin-bottom:6px}
+.step p{color:#cbd8cf;font-size:17.5px;line-height:1.8}
+.tip{max-width:860px;margin:24px auto 0;border:1px solid rgba(226,195,119,.5);border-radius:20px;padding:24px 30px;text-align:left;color:#e6eee8;font-size:17.5px;line-height:1.85}
+.tip b{color:var(--gold2)}
+@media(max-width:600px){.step{grid-template-columns:48px 1fr;padding:22px;gap:16px}.step .n{width:46px;height:46px;font-size:19px}}
+
+/* 종목 */
+.kinds{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.kind{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:36px 20px}
+.kind b{display:block;font-size:24px;color:var(--ink);letter-spacing:-.03em}
+.kind span{display:block;margin-top:8px;font-size:16.5px;color:var(--mute)}
+@media(max-width:860px){.kinds{grid-template-columns:1fr 1fr}}
+
+/* 신뢰 */
+.trust{background:var(--ivory2)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;text-align:left}
+.level{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px 26px}
+.level .lv{color:var(--gold);font-weight:800;font-size:15px;letter-spacing:.12em}
+.level b{display:block;margin:10px 0 10px;font-size:23px;color:var(--ink);letter-spacing:-.03em}
+.level span{font-size:17px;color:var(--body);line-height:1.8}
+.meet{max-width:760px;margin:36px auto 0;font-size:17px;color:var(--mute)}
+@media(max-width:960px){.levels{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.levels{grid-template-columns:1fr}}
+
+/* 우리가 바라는 골프 */
+.vision{background:linear-gradient(180deg,var(--green) 0%,#0a2219 100%);color:var(--ivory);text-align:center}
+.vision h2{color:var(--ivory);font-size:clamp(32px,5vw,56px)}
+.vision h2 em{font-style:normal;color:var(--gold2)}
+.vision .lead{color:#c9d6cd;margin-top:26px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px;text-align:left}
+.pillar{border:1px solid rgba(226,195,119,.35);border-radius:22px;padding:32px 28px;background:rgba(255,255,255,.035)}
+.pillar .pn{color:var(--gold2);font-weight:800;font-size:15px;letter-spacing:.12em}
+.pillar b{display:block;margin:10px 0 12px;font-size:24px;color:var(--ivory);letter-spacing:-.03em}
+.pillar span{font-size:17.5px;color:#cbd8cf;line-height:1.85}
+.vend{margin-top:48px;font-size:clamp(20px,2.6vw,26px);color:var(--gold2);font-weight:700;line-height:1.7}
+@media(max-width:900px){.pillars{grid-template-columns:1fr}}
+
+/* 이벤트 */
+.event{background:var(--gold);color:var(--green);text-align:center;padding:84px 0}
+.event h2{color:var(--green)}
+.event .when{display:inline-block;margin-top:20px;background:var(--green);color:var(--gold2);padding:12px 30px;border-radius:999px;font-weight:800;font-size:20px}
+.event p{margin:24px auto 0;max-width:620px;font-size:19px;color:#1d3a2d;font-weight:500}
+.event small{display:block;margin-top:10px;font-size:15.5px;color:#3d5345}
+
+/* 질문 */
+.faq .list{max-width:820px;margin:48px auto 0;text-align:left}
+details{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 28px;margin-top:12px}
+summary{cursor:pointer;font-weight:700;font-size:19px;color:var(--ink);list-style:none;letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold);font-size:26px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:14px;font-size:17.5px;color:var(--body)}
+
+/* 대회 */
+.soon{display:inline-block;background:var(--gold);color:var(--green);font-size:13.5px;font-weight:800;padding:4px 12px;border-radius:999px;letter-spacing:.04em;margin-left:10px;vertical-align:middle}
+.tour{background:var(--ivory2)}
+.route{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:56px;text-align:left}
+.stage{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:34px 28px}
+.stage .sn{color:var(--gold);font-weight:800;font-size:15px;letter-spacing:.12em}
+.stage b{display:block;margin:10px 0 12px;font-size:24px;color:var(--ink);letter-spacing:-.03em}
+.stage span{font-size:17.5px;color:var(--body);line-height:1.85}
+.prize{max-width:860px;margin:30px auto 0;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:26px 30px;text-align:left;font-size:17.5px;line-height:1.85}
+.prize b{color:var(--ink)}
+@media(max-width:900px){.route{grid-template-columns:1fr}}
+
+/* 하단 */
+footer{background:#081a13;color:#a9bbae;padding:60px 0;font-size:15.5px;line-height:1.9}
+footer .top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:center}
+footer .brand{color:var(--ivory)}
+footer .flinks{display:flex;gap:10px 26px;flex-wrap:wrap}
+footer .flinks a:hover{color:var(--gold2)}
+footer .biz{margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><img src="logo.png" alt="버디메이트 로고">버디메이트</a>
+  <div class="menu"><a href="#solve">해결하는 불편</a><a href="#how">사용 방법</a><a href="#trust">믿고 만나는 방법</a><a href="#tour">대회</a><a href="#vision">우리가 바라는 골프</a><a href="#faq">자주 묻는 질문</a></div>
+  <a class="cta" href="#download">앱 받기</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="kicker">골프 조인 앱</span>
+    <h1>같이 칠 사람이<br>없을 땐,<br><em>판</em>으로 모이세요</h1>
+    <p class="lead">버디메이트는 처음 보는 골퍼 2~4명이 모여 치는 앱입니다. 방을 올리거나 칠 수 있는 시간을 올려 두면, 같이 칠 판이 만들어집니다.</p>
+    <div class="stores" id="download">
+      <a class="btn fill" href="https://apps.apple.com/kr/app/id6819476493" rel="noopener">앱스토어에서 받기</a>
+      <a class="btn line" href="https://play.google.com/store/apps/details?id=com.fairwaycompany.birdiemate" rel="noopener">구글 플레이에서 받기</a>
+    </div>
+    <p class="note">휴대폰 본인확인을 마친 19세 이상만 이용할 수 있습니다.</p>
+  </div>
+  <div class="board" aria-label="앱 화면 예시">
+    <div class="cap">조인 게시판 · 예시 화면입니다</div>
+    <div class="room"><b>토요일 오후 스크린 한 자리</b><small>서울 · 스크린</small>
+      <div class="row"><div class="dots"><i></i><i></i><i></i><i class="e"></i></div><span class="pill">3 / 4명</span></div></div>
+    <div class="room"><b>일요일 아침 연습장 같이 가요</b><small>서울 · 연습장</small>
+      <div class="row"><div class="dots"><i></i><i class="e"></i><i class="e"></i></div><span class="pill gold">1 / 3명</span></div></div>
+    <div class="room"><b>평일 저녁 파크골프 4명</b><small>서울 · 파크골프</small>
+      <div class="row"><div class="dots"><i></i><i></i><i class="e"></i><i class="e"></i></div><span class="pill gold">2 / 4명</span></div></div>
+  </div>
+</div></header>
+
+<section class="solve" id="solve"><div class="wrap center">
+  <span class="kicker">우리가 해결하는 불편</span>
+  <h2>골프를 치다 보면 생기는<br>작은 불편에서 출발했습니다</h2>
+  <div class="divider"></div>
+  <p class="lead" style="margin-top:26px">불편마다 어떻게 풀었는지 적었습니다.</p>
+  <div class="cards">
+    <div class="card"><div class="q">불편 하나</div><h3>한 명이 모자라 못 쳐요</h3><span class="arrow"></span><p>아는 사람이 아니라, 처음 보는 골퍼 2~4명을 이어 한 판을 만듭니다. 모인 무리를 "판"이라고 부릅니다.</p></div>
+    <div class="card"><div class="q">불편 둘</div><h3>필드 이야기뿐이에요</h3><span class="arrow"></span><p>스크린, 필드, 연습장·파3, 파크골프를 모두 같은 방식으로 쓸 수 있게 했습니다.</p></div>
+    <div class="card"><div class="q">불편 셋</div><h3>사진부터 보고 고르기 부담돼요</h3><span class="arrow"></span><p>판이 서기 전에는 사진이 흐리게 보이고, 판이 선 뒤에 서로의 사진과 대화가 열립니다. 사람을 고르는 앱이 아니라, 같이 칠 판을 모으는 앱입니다.</p></div>
+    <div class="card"><div class="q">불편 넷</div><h3>처음 보는 사이라 걱정돼요</h3><span class="arrow"></span><p>본인확인을 마친 19세 이상만 가입하고, 사진은 운영자가 확인합니다. 불편하면 바로 신고하고 차단할 수 있습니다.</p></div>
+    <div class="card"><div class="q">불편 다섯</div><h3>방 올리고 기다리기 번거로워요</h3><span class="arrow"></span><p>자동 매칭에 날짜와 지역만 올려 두세요. 맞는 분이 생기면 앱이 판을 제안하고 알림을 보냅니다.</p></div>
+    <div class="card"><div class="q">불편 여섯</div><h3>구경만 해도 돈이 드는 건 싫어요</h3><span class="arrow"></span><p>판이 서야 성사 티가 쓰입니다. 판이 서기 전에는 언제든 무료로 나올 수 있습니다.</p></div>
+  </div>
+</div></section>
+
+<section class="how" id="how"><div class="wrap center">
+  <span class="kicker">사용 방법</span>
+  <h2>처음 5분이면 됩니다</h2>
+  <p class="lead" style="margin-top:22px">앱을 받은 뒤, 같이 칠 판이 서기까지의 순서입니다.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div><h3>앱을 받고 가입하기</h3><p>앱스토어나 구글 플레이에서 버디메이트를 받습니다. 휴대폰 본인확인을 마친 19세 이상만 가입할 수 있습니다.</p></div></div>
+    <div class="step"><div class="n">2</div><div><h3>프로필 사진 올리기</h3><p>사진은 운영자가 확인한 뒤 사용됩니다.</p></div></div>
+    <div class="step"><div class="n">3</div><div><h3>치고 싶은 종목 고르기</h3><p>스크린, 필드, 연습장·파3, 파크골프 중에서 고릅니다.</p></div></div>
+    <div class="step"><div class="n">4</div><div><h3>방에 들어가거나, 방을 올리기</h3><p>조인 게시판에서 마음에 드는 방에 들어갑니다. 맞는 방이 없으면 날짜·장소·인원을 적어 직접 올립니다. 번거로우면 자동 매칭에 날짜와 지역만 올려 두세요.</p></div></div>
+    <div class="step"><div class="n">5</div><div><h3>판이 서면 대화 시작</h3><p>인원이 모여 판이 서면 서로의 사진과 단체 대화가 열립니다. 대화에서 시간과 장소를 정하면 됩니다.</p></div></div>
+    <div class="step"><div class="n">6</div><div><h3>불편하면 바로 신고·차단</h3><p>마음에 걸리는 점이 있으면 앱 안에서 신고하거나 차단할 수 있고, 운영자가 확인합니다.</p></div></div>
+  </div>
+  <div class="tip"><b>알아 두세요.</b> 판이 서면 성사 티가 쓰입니다. 11월 15일까지는 오픈 이벤트로 무료입니다. 판이 서기 전에는 언제든 나갈 수 있지만, 판이 선 뒤에는 되돌릴 수 없으니 일정을 확인하고 들어가세요.</div>
+</div></section>
+
+<section><div class="wrap center">
+  <span class="kicker">종목</span>
+  <h2>치는 곳은 가리지 않습니다</h2>
+  <p class="lead" style="margin-top:22px">필드만의 앱이 아닙니다.</p>
+  <div class="kinds">
+    <div class="kind"><b>스크린</b><span>2~4명</span></div>
+    <div class="kind"><b>필드</b><span>2~4명</span></div>
+    <div class="kind"><b>연습장 · 파3</b><span>같이 가요</span></div>
+    <div class="kind"><b>파크골프</b><span>2~4명</span></div>
+  </div>
+</div></section>
+
+<section class="tour" id="tour"><div class="wrap center">
+  <span class="kicker">버디메이트 대회</span>
+  <h2>같이 치는 데서 끝내지 않고,<br>같이 겨루는 자리까지<span class="soon">준비 중</span></h2>
+  <div class="divider"></div>
+  <p class="lead" style="margin-top:26px">판으로 모인 골퍼들이 시상품이 걸린 대회에서 겨룹니다. 지역별 대회부터 시작해, 이후 전국 대회까지 넓혀 갑니다.</p>
+  <div class="route">
+    <div class="stage"><div class="sn">첫걸음</div><b>지역별 대회</b><span>회원이 많은 지역부터 차례로 엽니다. 스크린골프 대회를 먼저 준비하고 있습니다.</span></div>
+    <div class="stage"><div class="sn">다음</div><b>연습메이트</b><span>비슷한 실력끼리 같이 연습할 사람을 찾는 기능을 준비하고 있습니다.</span></div>
+    <div class="stage"><div class="sn">그다음</div><b>전국 대회</b><span>지역 대회가 자리를 잡으면 전국 규모의 대회로 엽니다.</span></div>
+  </div>
+  <div class="prize"><b>대회 소식은 이렇게 알려 드립니다.</b> 일정, 참가 방법, 시상 내용은 확정되는 대로 이 페이지와 앱 공지에 가장 먼저 올립니다. 아직 정해지지 않은 내용은 적지 않았습니다.</div>
+</div></section>
+
+<section class="trust" id="trust"><div class="wrap center">
+  <span class="kicker">믿고 만나는 방법</span>
+  <h2>처음 보는 사이라서,<br>단계마다 확인합니다</h2>
+  <p class="lead" style="margin-top:22px">이름도 얼굴도 모르는 사람과 치는 일이니, 들어오는 길부터 하나씩 확인합니다.</p>
+  <div class="levels">
+    <div class="level"><div class="lv">1단계</div><b>본인확인</b><span>휴대폰 본인확인을 마친 19세 이상만 가입합니다.</span></div>
+    <div class="level"><div class="lv">2단계</div><b>사진 확인</b><span>프로필 사진은 운영자가 확인한 뒤 사용됩니다.</span></div>
+    <div class="level"><div class="lv">3단계</div><b>판이 서야 공개</b><span>판이 서기 전에는 사진이 흐리게 보이고, 선 뒤에 서로의 사진과 대화가 열립니다.</span></div>
+    <div class="level"><div class="lv">4단계</div><b>신고·차단</b><span>불편한 상대는 바로 신고하고 차단할 수 있고, 운영자가 확인합니다.</span></div>
+  </div>
+  <p class="meet">처음 만날 때는 스크린골프장이나 골프장처럼 열린 공간에서 만나세요. 연락처 같은 개인 정보는 충분히 알게 된 뒤에 주고받으시길 권합니다.</p>
+</div></section>
+
+<section class="vision" id="vision"><div class="wrap">
+  <span class="kicker">우리가 바라는 골프</span>
+  <h2>혼자 치던 골프를,<br><em>함께 치는 문화</em>로</h2>
+  <p class="lead" style="margin-left:auto;margin-right:auto">같이 칠 사람이 없어서 망설이던 골퍼가 있습니다. 버디메이트는 그 한 자리를 채우는 데서 시작해, 골프를 같이 즐기는 방식 자체를 만들어 가려고 합니다.</p>
+  <div class="pillars">
+    <div class="pillar"><div class="pn">하나</div><b>함께 치는 문화</b><span>혼자 치던 골프를, 처음 보는 사람과도 한 판으로 만듭니다. 스크린, 필드, 연습장·파3, 파크골프 모두입니다.</span></div>
+    <div class="pillar"><div class="pn">둘</div><b>믿고 만나는 문화</b><span>본인확인, 사진 확인, 신고·차단으로 처음 보는 사이의 걱정을 줄입니다. 약속을 지키는 것이 기본이 되도록 만들어 갑니다.</span></div>
+    <div class="pillar"><div class="pn">셋</div><b>같이 즐기는 문화</b><span>시상품이 걸린 지역별 대회와 운영진이 여는 방을 준비하고 있고, 이후 전국 대회까지 넓혀 갑니다. 일정이 정해지면 가장 먼저 알려 드립니다.</span></div>
+  </div>
+  <p class="vend">사람을 잇는 데서 멈추지 않고,<br>골프를 같이 즐기는 방식을 앞장서 만들어 가겠습니다.</p>
+</div></section>
+
+<section class="event"><div class="wrap">
+  <h2>오픈 이벤트</h2>
+  <div class="when">11월 15일까지</div>
+  <p>판이 서면 쓰이는 <b>성사 티</b>와 VIP <b>대화 열기 티</b>가 무료입니다.</p>
+  <small>11월 16일 0시부터 원래 이용 조건으로 돌아갑니다.</small>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap center">
+  <span class="kicker">자주 묻는 질문</span>
+  <h2>궁금한 점이 있으신가요</h2>
+  <div class="list">
+    <details><summary>친구와 같이 쓸 수도 있나요?</summary><p>버디메이트의 중심은 처음 보는 사람과 판을 만드는 것입니다. 방을 올릴 때 일행이 있는 경우를 함께 적을 수 있습니다.</p></details>
+    <details><summary>티는 무엇인가요?</summary><p>앱 안에서 쓰는 재화입니다. 판이 서면 성사 티가 쓰이고, 오픈 이벤트 기간에는 성사 티가 무료입니다.</p></details>
+    <details><summary>VIP는 무엇인가요?</summary><p>1:1 만남을 원하는 회원을 위한 승인제 서비스입니다. 승인 기준과 이용 조건은 앱 안에서 확인하실 수 있습니다.</p></details>
+    <details><summary>버디메이트에서 대회도 하나요?</summary><p>지역별 대회를 준비하고 있고, 이후 전국 대회까지 열 계획입니다. 일정, 참가 방법, 시상 내용은 확정되는 대로 이 페이지와 앱 공지로 알려 드립니다.</p></details>
+    <details><summary>연습메이트는 무엇인가요?</summary><p>비슷한 실력끼리 같이 연습할 사람을 찾는 기능으로, 준비 중입니다. 지금은 연습장·파3 종목의 방을 올리거나 들어가서 같이 연습할 수 있습니다.</p></details>
+    <details><summary>어떤 종목을 지원하나요?</summary><p>스크린, 필드, 연습장·파3, 파크골프입니다.</p></details>
+    <details><summary>누구나 가입할 수 있나요?</summary><p>휴대폰 본인확인을 마친 19세 이상만 가입할 수 있고, 사진은 운영자가 확인합니다.</p></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="top">
+    <div class="brand"><img src="logo.png" alt="">버디메이트</div>
+    <div class="flinks"><a href="https://sites.google.com/view/birdiemate/privacy" rel="noopener">개인정보처리방침</a><a href="https://sites.google.com/view/birdiemate/delete-account" rel="noopener">계정 삭제 요청</a><a href="https://sites.google.com/view/birdiemate/child-safety" rel="noopener">아동 안전 표준</a><a href="#download">앱 받기</a></div>
+  </div>
+  <div class="biz">
+    페어웨이앤컴퍼니 · 대표 전영민<br>
+    통신판매업 신고번호 2026-용인기흥-01647<br>
+    사업자등록번호 · 주소 · 문의처: 기재 예정<br>
+    © 2026 페어웨이앤컴퍼니. 모든 권리를 보유합니다.
+  </div>
+</div></footer>
+
+</body>
+</html>
