@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://birdiemate.kr/sitemap.xml
+Sitemap: https://ssiioo9785.github.io/birdiemate-site/sitemap.xml
